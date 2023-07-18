@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Oswald:wght@200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+Colores:
+
+Tipografias: 
+font-family: 'Koulen', cursive;
+font-family: 'Oswald', sans-serif;
+*/
+body{
+    color: white;
+}
+
+header{
+    width: 100%;
+    
+}
+
+.header-nav{
+    background-color: gray;
+    color: white;
+    height: 90px;
+    width: 100%;
+
+
+}
+
+
+/* Navbar*/
+
+
+/*logo navbar*/
+.enlace-img{
+    position: absolute;
+    padding: 10px 50px;
+
+}
+.logo-img{
+    height: 60px 60px;
+}
+
+.navbar{
+    float: right;
+    margin-right: 20px;
+    font-family:'Koulen'
+    
+}
+.navbar li{
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 5px;
+    
+}
+
+.navbar li a{
+    color: white;
+    font-size: 30px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background:#000090;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 90px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media ( max-width: 56.25rem) {
+    .enlace-img{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .section-principal h1{
+        font-size: 56px;
+    }
+    .section-principal h2{
+        font-size: 25px;
+    }
+    .section-principal p{
+        font-size: 10px;
+    }
+}
+
+@media ( max-width: 47.5rem ) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 100vh;
+        background: black;
+        top: 90px;
+        left: -100%;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav ul li{
+        display: block;
+        line-height: 10px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* Barra de navegación*/
+
+
+/*HOME*/
+main{
+    height: 100%;
+    background-image:url(/assets/home-fondo.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+.section-principal{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    font-family: koulen;
+}
+.section-principal h1{
+    padding-top: 10rem;
+    padding: 0 20px;
+    margin: 0 10px;
+    font-size: 88px;
+    font-weight: 700;
+}
+.section-principal h2{
+    font-size: 35px;
+    font-weight: 400;
+}
+.section-principal p {
+    padding: 20px 60px;
+    font-size: 20px;
+}
+
+/*MENÚ*/
+
+.section-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Koulen'; 
+    min-height: 100vh;
+    background-image:url(/assets/menu-fondo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.section-menu article h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin-bottom: 7rem;
+}
+
+.section-menu  article div{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-menu article div h4{
+    font-size: 1.5rem;
+}
+
+.section-menu article div img{
+    height: 17rem;
+}
+
+.menu-hamburguesas{
+    margin-right: 22rem;
+}
+
+.menu-hamburguesas h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.menu-hamburguesas img{
+    width: 22.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 1.5px 5px white;
+}
+.menu-hamburguesas:hover{
+    transform: scale(1.1);
+}
+
+.menu-bebidas h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.menu-bebidas img{
+    width: 22.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 1.5px 5px white;
+}
+
+.menu-bebidas:hover{
+    transform: scale(1.1);
+}
+
+
+/*Productos*/
+
+.section-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Koulen'; 
+    min-height: 100vh;
+    background-image:url(/assets/productos-fondo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.section-productos article h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+.section-productos div a{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.section-productos div{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.flippers{
+    margin-right: 9rem;
+    text-align: center;
+}
+.flippers img{
+    border-radius: 25px;
+}
+.flippers:hover{
+    transform: scale(1.1);
+}
+
+.smasher{
+    margin-right: 9rem;
+    text-align: center;
+}
+
+.smasher img{
+    border-radius: 25px;
+}
+.smasher:hover{
+    transform:scale(1.1);
+}
+.planchetas{
+    text-align: center;
+}
+.planchetas img{
+    border-radius: 25px;
+}
+.planchetas:hover{
+    transform: scale(1.1);
+}
+
+/*Nosotros*/
+.section-nosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Koulen'; 
+    min-height: 100vh;
+    background-image:url(/assets/nosotros-fondo.webp);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.section-nosotros div{
+    display: inline-block;
+}
+
+.texto-historia{
+    text-align: justify;
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    margin-right: 2rem;
+}
+
+.foto-nosotros{
+    height:500px;
+    width: 500px;
+}
+
+
+
+
+/*Contacto*/
+
+.section-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Koulen'; 
+    min-height: 100vh;
+    background-image:url(/assets/contacto-fondo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.section-contacto article{
+    background-color: rgb(210, 231, 89);
+    height: 550px;
+    width: 800px;
+}
+
+
+/*Footer*/
+
+footer{
+    font-family: oswald;
+    background-color: #242628;
+    padding: 5rem 0;
+    
+}
+.container{
+    max-width: 75rem;
+    margin: 0 auto;
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 25%;
+    padding: 0 .9375rem;
+}
+
+.footer-links h4{
+    font-size: 1.25rem;
+    margin-bottom: 1.5625rem;
+    font-weight: 500;
+    border-bottom: 2px solid yellow;
+    padding-bottom: .625rem;
+    display: inline-block;
+}
+.footer-links ul li {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    font-size: 1.125rem;
+    text-decoration: none;
+    color:#BBBBBB;
+    display: block;
+    margin-bottom: .9375rem;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: white;
+    padding-left: .375rem;
+}
+
+.social-links a{
+    display: inline-block;
+    min-height: 2.5rem;
+    width: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 .625rem 1.125rem 0;
+    text-align: center;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+
+.social-links a:hover{
+    background-color: gray;
+}
